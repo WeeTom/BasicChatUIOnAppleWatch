@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="qZ8-sx-JNu">
+                            <items>
+                                <tableRow identifier="Chat" id="0nA-jx-Xdx" customClass="ChatRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="FHI-0b-KMd">
+                                        <items>
+                                            <group alignment="left" verticalAlignment="center" radius="20" id="zQr-FC-nfO">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" id="HQG-bU-MJR"/>
+                                                </items>
+                                            </group>
+                                            <group alignment="left" verticalAlignment="center" layout="vertical" id="KTz-X7-OAh">
+                                                <items>
+                                                    <label alignment="left" text="Name" id="fOf-vF-J5n"/>
+                                                    <label alignment="left" text="N unread" id="Y8z-0s-04U"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" red="0.1058823529" green="0.67843137249999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="avatarImage" destination="HQG-bU-MJR" id="TGy-qC-Hbc"/>
+                                        <outlet property="nameLabel" destination="fOf-vF-J5n" id="IS8-Hs-8a2"/>
+                                        <outlet property="unreadLabel" destination="Y8z-0s-04U" id="bxf-e1-7a7"/>
+                                        <segue destination="bHY-1b-RbR" kind="push" id="rDz-Pm-768"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="qZ8-sx-JNu" id="mjD-JR-vLG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="441" y="363"/>
+        </scene>
+        <!--Chat Controller-->
+        <scene sceneID="vQo-aJ-y2i">
+            <objects>
+                <controller id="bHY-1b-RbR" customClass="ChatController">
+                    <items>
+                        <table alignment="left" id="32y-6B-oY0">
+                            <items>
+                                <tableRow identifier="IncomingText" id="Rdc-6L-BNG" customClass="MessageRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="MAR-4g-Pxa">
+                                        <items>
+                                            <group alignment="left" radius="4" id="q7D-9v-6iN">
+                                                <items>
+                                                    <label alignment="left" text="Hi!" numberOfLines="0" id="Z21-9p-Nrs">
+                                                        <fontDescription key="font" type="system" pointSize="25"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1058823529" green="0.67843137249999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="Z21-9p-Nrs" id="0uN-6T-AnL"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="OutgoingText" id="HSB-8J-gXH" customClass="MessageRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="EhX-mB-yiK">
+                                        <items>
+                                            <group alignment="right" radius="4" id="y7h-Kz-EQ4">
+                                                <items>
+                                                    <label alignment="left" text="Hello!" numberOfLines="0" id="3JT-cK-xOj">
+                                                        <fontDescription key="font" type="system" pointSize="25"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="4" right="4" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="3JT-cK-xOj" id="woV-13-75d"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="IncomingImage" id="Qcj-MZ-zpc" customClass="MessageRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="07g-Vw-VYX">
+                                        <items>
+                                            <group alignment="left" verticalAlignment="center" radius="4" id="bOP-Yu-crl">
+                                                <items>
+                                                    <imageView width="100" height="100" alignment="left" id="j5Z-wD-unm"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1058823529" green="0.67843137249999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="2" right="2" top="2" bottom="2"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="j5Z-wD-unm" id="XKN-IR-O7L"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="OutgoingImage" id="Eh3-od-kWi" customClass="MessageRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="aeP-YP-qJd">
+                                        <items>
+                                            <group alignment="right" radius="4" id="Swl-Du-Enh">
+                                                <items>
+                                                    <imageView width="100" height="100" alignment="left" id="2OF-vG-yD3"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="2" right="2" top="2" bottom="2"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="2OF-vG-yD3" id="dff-7d-N0o"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="IncomingVoice" id="2Tg-Ly-Qnj" customClass="MessageRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="RIX-YZ-B9J">
+                                        <items>
+                                            <group alignment="left" radius="4" id="x0v-IY-fLQ">
+                                                <items>
+                                                    <label alignment="left" text="[Voice]" id="avb-9g-01p">
+                                                        <fontDescription key="font" type="system" pointSize="25"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.1058823529" green="0.67843137249999996" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="2" right="2" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                </tableRow>
+                                <tableRow identifier="OutgoingVoice" id="Ewm-jm-JqS" customClass="MessageRowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="Wt1-cE-e4c">
+                                        <items>
+                                            <group alignment="right" radius="4" id="Qvd-w2-xJd">
+                                                <items>
+                                                    <label alignment="left" text="[Voice]" id="cDR-Sf-uVA">
+                                                        <fontDescription key="font" type="system" pointSize="25"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="2" right="2" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" alignment="left" id="GhF-vC-kVQ">
+                            <items>
+                                <button width="0.5" alignment="left" title="Text" id="IRQ-sJ-qHc">
+                                    <connections>
+                                        <action selector="textBtnPressed" destination="bHY-1b-RbR" id="Bgc-h5-oar"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Voice" id="JEL-pO-kIb">
+                                    <connections>
+                                        <action selector="voiceBtnPressed" destination="bHY-1b-RbR" id="c4l-9j-ers"/>
+                                        <segue destination="U0r-17-PZz" kind="modal" id="t2H-C2-kBx"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="32y-6B-oY0" id="ngj-tX-SYH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="812" y="363"/>
+        </scene>
+        <!--Recorder-->
+        <scene sceneID="iq3-Cs-57v">
+            <objects>
+                <controller identifier="Recorder" id="U0r-17-PZz" customClass="RecordController">
+                    <items>
+                        <button alignment="center" verticalAlignment="center" id="ctq-ie-hto">
+                            <group key="contentGroup" width="1" height="1" alignment="left" layout="vertical" id="PLY-Z3-Uai">
+                                <items>
+                                    <imageView width="0.80000000000000004" height="0.80000000000000004" alignment="center" image="ring0" contentMode="scaleAspectFit" animationDuration="60" id="jfO-6y-ezr"/>
+                                    <label alignment="center" text="status" id="bK7-To-g15"/>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="btnPressed" destination="U0r-17-PZz" id="qhg-Pl-Mru"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ringImage" destination="jfO-6y-ezr" id="ddf-7X-Twv"/>
+                        <outlet property="statusLabel" destination="bK7-To-g15" id="Odr-hT-UOn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="812" y="823"/>
+        </scene>
+    </scenes>
+</document>
