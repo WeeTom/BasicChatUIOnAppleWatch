@@ -144,9 +144,11 @@ typedef enum {
 
 - (IBAction)textBtnPressed {
     [self presentTextInputControllerWithSuggestions:@[@"Hello", @"Hi"] allowedInputMode:WKTextInputModeAllowAnimatedEmoji completion:^(NSArray *results) {
-        NSDictionary *messageDic = @{@"msg":results.firstObject, @"source":@(MessageSourceOutgoing), @"type":@(MessageTypeText)};
-        [_messages addObject:messageDic];
-        [self insertRowForMessage:messageDic];
+        if (results.count > 0) {
+            NSDictionary *messageDic = @{@"msg":results.firstObject, @"source":@(MessageSourceOutgoing), @"type":@(MessageTypeText)};
+            [_messages addObject:messageDic];
+            [self insertRowForMessage:messageDic];
+        }
     }];
 }
 
