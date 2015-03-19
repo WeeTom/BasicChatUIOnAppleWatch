@@ -1,3 +1,10 @@
+#效果
+![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/demo.gif?raw=true)
+
+#截图
+![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/iOS%20Simulator%20Screen%20Shot%20-%20Apple%20Watch%202015%E5%B9%B43%E6%9C%8819%E6%97%A5%2017.29.30.png?raw=true)![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/iOS%20Simulator%20Screen%20Shot%20-%20Apple%20Watch%202015%E5%B9%B43%E6%9C%8819%E6%97%A5%2017.29.40.png?raw=true)![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/iOS%20Simulator%20Screen%20Shot%20-%20Apple%20Watch%202015%E5%B9%B43%E6%9C%8819%E6%97%A5%2017.29.53.png?raw=true)![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/iOS%20Simulator%20Screen%20Shot%20-%20Apple%20Watch%202015%E5%B9%B43%E6%9C%8819%E6%97%A5%2017.30.01.png?raw=true)![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/iOS%20Simulator%20Screen%20Shot%20-%20Apple%20Watch%202015%E5%B9%B43%E6%9C%8819%E6%97%A5%2017.30.39.png?raw=true)
+
+
 #1-3. 都是废话，删了
 #4. Start
 App结构：
@@ -168,5 +175,4 @@ WatchKit里有一个输入法，任何一个WKInterfaceController都可以调用
 ##5.6 资源：[圆环指示器快速生成](http://hmaidasani.github.io/RadialChartImageGenerator/)
 
 ##5.7 Demo源码：[GitHub](https://github.com/WeeTom/BasicChatUIOnAppleWatch)
-
 
