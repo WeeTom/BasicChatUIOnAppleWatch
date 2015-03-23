@@ -74,7 +74,7 @@ WKInterfaceController 下有个方法是
 我们需要支持展示聊天内容，播放聊天语音
 
 ###第二个问题来了 我的消息发出和收到，一个是靠左，一个是靠右对齐的，单一的TableRowController无法实现
-我一度为这个问题难道，创建了非常复杂的RowController，企图通过设置多个透明的Group来帮助聊天消息的对齐走向，我太天真了。
+我一度为这个问题难倒，创建了非常复杂的RowController，企图通过设置多个透明的Group来帮助聊天消息的对齐走向，我太天真了。
 可是微信已经实现了啊！难道他有特殊方法吗。。呵呵，其实是我的思维没打开，还是固定在iOS App上的开发方式，一个Table 用一类Cell解决所有UI。但是其实一个Table可以有多个RowController。当然其实这些RowController其实结构都一样，只不过部分元素在细节上不同，但代码是无法控制的！只能通过SB来创建不同的RowController，通过定义不同的Identifier来实现。但是这些RowController其实都可以是一个类。
 	    
 	- (void)setupTable
