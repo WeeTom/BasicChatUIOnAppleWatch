@@ -1,3 +1,6 @@
+#4月6日更新 真机测试结果
+非常抱歉的告诉大家看，本Demo关于录音和播放的环节全部不能在真机上完美运行，AVAudio的代码在模拟器和真机上的实现效果差异很大，语音播放会通过iPhone，录制则结果是空的文件~微信一样没办法做，应该是没有开放扬声器和麦克风的接口~
+
 #效果
 ![image](https://github.com/WeeTom/BasicChatUIOnAppleWatch/blob/master/images/demo.gif?raw=true)
 
